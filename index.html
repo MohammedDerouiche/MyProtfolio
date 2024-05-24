@@ -131,7 +131,8 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong>
-                    <span>mohammed.der.work@gmail.com</span></li>
+                    <span>mohammed.der.work@gmail.com</span>
+                  </li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
@@ -751,10 +752,11 @@
                 <p>+213675556146</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53316.57682854428!2d6.815111433589833!3d33.36359728606846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1259110e27dc0d5b%3A0x18e06c3aaedd4496!2sEl%20Oued!5e0!3m2!1sen!2sdz!4v1716509544977!5m2!1sen!2sdz" 
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53316.57682854428!2d6.815111433589833!3d33.36359728606846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1259110e27dc0d5b%3A0x18e06c3aaedd4496!2sEl%20Oued!5e0!3m2!1sen!2sdz!4v1716509544977!5m2!1sen!2sdz"
+                style="border:0; width: 100%; height: 450px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -790,6 +792,21 @@
 
       </div>
     </section><!-- End Contact Section -->
+    
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const subject = form.subject.value;
+        const message = form.message.value;
+
+        const mailtoLink = `mailto:mohammed.der.work@gmail.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
+      }
+    </script>
 
   </main><!-- End #main -->
 
